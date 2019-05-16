@@ -5,5 +5,14 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  plugins: [
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      path: `${__dirname}/files`,
+      name: "files",
+    },
+  },
+  `gatsby-transformer-remark`
+	]
 }
